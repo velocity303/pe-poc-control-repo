@@ -16,12 +16,14 @@ class profile::puppet::clean_certs {
     ensure  => absent,
     recurse => true,
     purge   => true,
+    force   => true,
   }
 
   file { '/etc/puppetlabs/puppetdb/ssl':
     ensure  => absent,
     recurse => true,
     purge   => true,
+    force   => true,
   }
 
   file { "/opt/puppetlabs/puppet/cache/client_data/catalog/localhost.localdomain.json":
@@ -32,12 +34,14 @@ class profile::puppet::clean_certs {
     ensure  => absent,
     recurse => true,
     purge   => true,
+    force   => true,
   }
 
   file { '/opt/puppetlabs/server/data/console-services/certs/':
     ensure  => absent,
     recurse => true,
     purge   => true,
+    force   => true,
   }
 
 }
